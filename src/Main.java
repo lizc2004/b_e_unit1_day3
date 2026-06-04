@@ -1,13 +1,18 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-  //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-  // to see how IntelliJ IDEA suggests fixing it.
-  IO.println(String.format("Hello and welcome!"));
+import entities.Rettangolo;
 
-  for (int i = 1; i <= 5; i++) {
-    //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-    // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-    IO.println("i = " + i);
-  }
-}
+public class Main {
+    public static void main(String[] args) {
+        Rettangolo r = new Rettangolo(5, 6);
+        Rettangolo r2 = new Rettangolo(10, 12);
+        stampaDueRettangoli(r, r2);
+
+        }
+    public static void stampaDueRettangoli(Rettangolo r1, Rettangolo r2) {
+        System.out.println("Area e perimetro di r1: " + r1.getArea() + ", " + r1.getPerimetro());
+        System.out.println("Area e perimetro di r2: " + r2.getArea() + ", " + r2.getPerimetro());
+        System.out.println("Somma delle aree: " + (r1.getArea() + r2.getArea()));
+        System.out.println("Somma dei perimetri: " + (r1.getPerimetro() + r2.getPerimetro()));
+    }
+    }
+
+
